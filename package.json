@@ -1,6 +1,6 @@
 {
-  "name": "pullplaylist",
-  "description": "Youtube video downloader in pure javascript.",
+  "name": "youtube-playlist-info",
+  "description": "Youtube playlist information fetcher.",
   "keywords": [
     "youtube",
     "video",
@@ -9,27 +9,26 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sameid/pullplaylist.git"
+    "url": "git@github.com:benkaiser/youtube-playlist-info.git"
   },
-  "author": "Sameid Usmani (http://sameidusmani.com)",
+  "author": "Benjamin Kaiser",
   "main": "run.js",
   "dependencies": {
-    "ytdl-core": "*",
     "youtube-api": "*"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/sameid/pullplaylist/raw/master/LICENSE"
+      "url": "http://github.com/benkaiser/youtube-playlist-info/raw/master/LICENSE"
     }
   ],
   "bugs": {
-    "url": "https://github.com/sameid/pullplaylist/issues"
+    "url": "https://github.com/benkaiser/youtube-playlist-info/issues"
   },
-  "homepage": "https://github.com/sameid/pullplaylist",
+  "homepage": "https://github.com/benkaiser/youtube-playlist-info",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "license": "MIT"
 }
