@@ -7,7 +7,6 @@ The library does not currently emit progress events, however pull requests are w
 ### Install ###
 ```
 npm install youtube-playlist-info
-
 ```
 
 ### Usage ###
