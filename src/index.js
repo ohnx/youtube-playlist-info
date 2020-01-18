@@ -1,5 +1,4 @@
 const youtube = require('youtube-api');
-const fs = require('fs');
 
 function playlistInfoRecursive(playlistId, callStackSize, pageToken, currentItems, customRequestAmount, callback) {
   youtube.playlistItems.list({
@@ -9,11 +8,11 @@ function playlistInfoRecursive(playlistId, callStackSize, pageToken, currentItem
     playlistId: playlistId,
   }, function(err, data) {
     if (err) return callback(err);
-    for (const x in data.items) {
-      currentItems.push(data.items[x].snippet);
+    for (const x in data.data.items) {
+      currentItems.push(data.data.items[x].snippet);
     }
-    if (data.nextPageToken && (customRequestAmount > 50 || !customRequestAmount)) {
-      playlistInfoRecursive(playlistId, callStackSize + 1, data.nextPageToken, currentItems, (customRequestAmount > 50 ? customRequestAmount - 50 : customRequestAmount), callback);
+    if (data.data.nextPageToken && (customRequestAmount > 50 || !customRequestAmount)) {
+      playlistInfoRecursive(playlistId, callStackSize + 1, data.data.nextPageToken, currentItems, (customRequestAmount > 50 ? customRequestAmount - 50 : customRequestAmount), callback);
     } else {
       callback(null, currentItems);
     }

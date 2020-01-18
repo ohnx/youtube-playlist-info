@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/benkaiser/youtube-playlist-info#readme",
   "dependencies": {
-    "youtube-api": "^2.0.9"
+    "youtube-api": "git+https://git@github.com/ohnx/youtube-api.git"
   },
   "engines": {
     "node": ">=6"
